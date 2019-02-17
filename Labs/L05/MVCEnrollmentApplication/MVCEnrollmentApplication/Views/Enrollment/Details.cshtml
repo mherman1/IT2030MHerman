@@ -1,0 +1,74 @@
+﻿@model MVCEnrollmentApplication.Models.Enrollment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Enrollment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Course.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.CheckBoxFor(model => model.IsActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignedCampus)
+        </dt>
+
+        <dd>
+            @Html.TextBoxFor(model => model.AssignedCampus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnrollmentSemester)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnrollmentSemester)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnrollmentYear)
+        </dt>
+
+        <dd>
+            @Html.TextBoxFor(model => model.EnrollmentYear)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EnrollmentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
