@@ -13,7 +13,7 @@ namespace MVCEnrollmentApplication.Models
         public virtual int StudentID { get; set; }
         public virtual int CourseID { get; set; }
 
-        [Required(ErrorMessage="{0} is required")]
+        [Required(ErrorMessage = "{0} is required")]
         [RegularExpression("[A-DFa-df]", ErrorMessage = "Only use letter grades A through F")]
         public virtual string Grade { get; set; }
         public virtual Student Student { get; set; }
@@ -21,7 +21,7 @@ namespace MVCEnrollmentApplication.Models
         public virtual bool IsActive { get; set; }
 
         [Required(ErrorMessage = "Campus is required")]
-        [Display(Name="Assigned Campus")]
+        [Display(Name = "Assigned Campus")]
         public virtual string AssignedCampus { get; set; }
 
         [Required(ErrorMessage = "Semester is required")]
@@ -29,10 +29,10 @@ namespace MVCEnrollmentApplication.Models
         public virtual string EnrollmentSemester { get; set; }
 
         [Required(ErrorMessage = "{0} is required")]
-        [Range(2018,Double.MaxValue, ErrorMessage = "Cannot be earlier than 2018")]
+        [Range(2018, Double.MaxValue, ErrorMessage = "Cannot be earlier than 2018")]
         public virtual int EnrollmentYear { get; set; }
 
-        [InvalidChars("*")]
+        [InvalidChars("!@#$%", ErrorMessage = "The following charaters are not allowed: !, @, #, $, %." )]
         public virtual string Notes { get; set; }
     }
 }

@@ -19,8 +19,8 @@ namespace MVCEnrollmentApplication.Models
         {
             if(value != null)
             {
-                var valueAsString = value.ToString();
-                if (valueAsString.Contains(invalidChars) == true)
+                var valueAsList = value.ToString().ToList();
+                if (valueAsList.Intersect(invalidChars.ToList()).Any() == true)
                 {
                     var errormessage = FormatErrorMessage(validationContext.DisplayName);
                     return new ValidationResult(errormessage);
