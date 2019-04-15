@@ -369,7 +369,7 @@ namespace MovieStore.Tests.Controllers
             MoviesController controller = new MoviesController(mockContext.Object);
 
             controller.ModelState.Clear();
-
+            
             //Act
             RedirectToRouteResult result = controller.Edit(movie) as RedirectToRouteResult;
 
