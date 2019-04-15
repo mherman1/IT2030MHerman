@@ -362,6 +362,8 @@ namespace MovieStore.Tests.Controllers
 
             mockSet.Setup(m => m.Find(It.IsAny<Object>())).Returns(movie);
 
+            mockContext.Setup(db => db.SetModified(It.IsAny<Movie>()));
+
             //Step 4
             mockContext.Setup(db => db.Movies).Returns(mockSet.Object);
 
