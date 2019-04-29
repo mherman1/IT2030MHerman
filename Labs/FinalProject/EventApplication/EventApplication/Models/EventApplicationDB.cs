@@ -20,5 +20,7 @@ namespace EventApplication.Models
         }
 
         public System.Data.Entity.DbSet<EventApplication.Models.EventType> EventTypes { get; set; }
+
+        public System.Data.Entity.DbSet<EventApplication.Models.Event> Events { get; set; }
     }
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventApplication", "EventApplication\EventApplication.csproj", "{363109D5-7791-469C-B357-769A5FAF938B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventApplication", "EventApplication\EventApplication.csproj", "{84F07127-3B45-4455-BA58-28DA0BBF9686}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{363109D5-7791-469C-B357-769A5FAF938B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{363109D5-7791-469C-B357-769A5FAF938B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{363109D5-7791-469C-B357-769A5FAF938B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{363109D5-7791-469C-B357-769A5FAF938B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84F07127-3B45-4455-BA58-28DA0BBF9686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84F07127-3B45-4455-BA58-28DA0BBF9686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84F07127-3B45-4455-BA58-28DA0BBF9686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84F07127-3B45-4455-BA58-28DA0BBF9686}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7105D354-61F8-4BF6-87E0-83C3F795E85F}
+		SolutionGuid = {64D2E3C6-88A8-4E0B-922D-206EE71EE39B}
 	EndGlobalSection
 EndGlobal
