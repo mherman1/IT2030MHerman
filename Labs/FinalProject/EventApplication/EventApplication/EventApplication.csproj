@@ -275,6 +275,7 @@
     <Content Include="Views\FindEvent\_EventSearch.cshtml" />
     <Content Include="Views\FindEvent\_NoResults.cshtml" />
     <Content Include="Views\FindEvent\Details.cshtml" />
+    <Content Include="Views\Home\_LastMinuteDeals.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

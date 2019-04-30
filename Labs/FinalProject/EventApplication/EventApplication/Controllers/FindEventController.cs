@@ -14,9 +14,9 @@ namespace EventApplication.Controllers
     {
         private EventApplicationDB db = new EventApplicationDB();
 
-        public ActionResult EventSearch(string q)
+        public ActionResult EventSearch(string p)
         {
-            var events = GetEvents(q);
+            var events = GetEvents(p);
 
             if (events.Any())
             {
@@ -30,7 +30,7 @@ namespace EventApplication.Controllers
         private List<Event> GetEvents(string searchString)
         {
            return db.Events
-                .Where(a => a.Title.Contains(searchString) || a.Type.Contains(searchString))
+                .Where(a => a.Title.Contains(searchString) || a.Type.Type.Contains(searchString))
                 .OrderBy(a => a.Title)
                 .ToList();
         }
@@ -62,7 +62,7 @@ namespace EventApplication.Controllers
             return View();
         }
 
-        // GET: FindEvent/Details/1
+        // GET: FindEvent/Details/
         public ActionResult Details(int? id)
         {
             if (id == null)
