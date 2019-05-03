@@ -10,20 +10,58 @@ using EventApplication.Models;
 
 namespace EventApplication.Controllers
 {
+    [AllowAnonymous]
     public class FindEventController : Controller
     {
         private EventApplicationDB db = new EventApplicationDB();
 
-        public ActionResult EventSearch(string p)
+        public ActionResult Search(string p, string q)
         {
-            var events = GetEvents(p);
-
-            if (events.Any())
+            if (p != "" && q == "")
             {
-                return PartialView("_EventSearch", events);
-            }
+                var events = GetEvents(p);
 
-            return PartialView("_NoResults");
+                if (events.Any())
+                {
+                    return PartialView("_EventSearch", events);
+                }
+
+                return PartialView("_NoResults");
+            }
+            else if (p == "" && q != "")
+            {
+                var locations = GetLocations(q);
+
+                if (locations.Any())
+                {
+                    return PartialView("_EventSearch", locations);
+                }
+
+                return PartialView("_NoResults");
+            }
+            else if (p != "" && q != "")
+            {
+                var eventsbylocation = GetEventsByLocation(p, q);
+
+                if (eventsbylocation.Any())
+                {
+                    return PartialView("_EventSearch", eventsbylocation);
+                }
+
+                return PartialView("_NoResults");
+            }
+            else 
+            {
+                var locations = GetLocations(q);
+
+                if (locations.Any())
+                {
+                    return PartialView("_EventSearch", locations);
+                }
+
+                return PartialView("_NoResults");
+            }
+            
 
         }
 
@@ -35,18 +73,6 @@ namespace EventApplication.Controllers
                 .ToList();
         }
 
-        public ActionResult LocationSearch(string q)
-        {
-            var locations = GetLocations(q);
-
-            if (locations.Any())
-            {
-                return PartialView("_EventSearch", locations);
-            }
-
-            return PartialView("_NoResults");
-        }
-
         private List<Event> GetLocations(string searchString)
         {
             return db.Events
@@ -56,25 +82,24 @@ namespace EventApplication.Controllers
                 .ToList();
         }
 
+        private List<Event> GetEventsByLocation(string q, string p)
+        {
+            return db.Events
+                 .Where(a => a.Title.Contains(q) || a.Type.Type.Contains(q))
+                 .Where(a => a.City.Contains(p) || a.State.Contains(p))
+                 .OrderBy(a => a.Title)
+                 .ToList();
+        }
+
+
         // GET: FindEvent
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: FindEvent/Details/
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Event @event = db.Events.Find(id);
-            if (@event == null)
-            {
-                return HttpNotFound();
-            }
-            return View(@event);
-        }
+        
+
+        
     }
 }

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<EventApplication.Models.Event>
 
 <div id="searchresults">
-    <table>
+    <table class="table-condensed">
         <tr>
             <th>Title</th>
             <th></th>
@@ -20,7 +20,7 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@Html.RouteLink(item.Title, new { controller="FindEvent", action="Details", id = item.EventId })</td>
+                <td>@Html.RouteLink(item.Title, new { controller="TicketsOrdered", action="Details", id = item.EventId })</td>
                 <td></td>
                 <td></td>
                 <td>@item.StartDate</td>

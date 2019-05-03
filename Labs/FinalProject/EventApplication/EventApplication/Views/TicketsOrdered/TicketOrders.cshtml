@@ -1,0 +1,33 @@
+﻿@model EventApplication.Models.TicketsOrderedViewModel
+
+@{
+    ViewBag.Title = "TicketOrders";
+}
+
+@section Scripts {
+    <script src="~/Scripts/Apps/OrderScripts.js"></script>
+}
+
+<h2>Ticket Orders</h2>
+
+<table class="table">
+    <tr>
+        <td>Title</td>
+        <td>Date Ordered</td>
+        <td>Number of Tickets</td>
+        <td>Order Status</td>
+        <td></td>
+    </tr>
+
+    @foreach (var item in Model.OrderItems)
+    {
+        <tr id="record-@item.RecordId">
+            <td>@item.EventSelected.Title</td>
+            <td>@item.DateCreated</td>
+            <td></td>
+            @*<td id="item-count-@item.RecordId">@item.Count</td>*@
+            <td id="update-message">Processed</td>
+            <td><a href="#" data-id="@item.RecordId" class="RemoveLink">Cancel Order</a></td>
+        </tr>
+    }
+</table>

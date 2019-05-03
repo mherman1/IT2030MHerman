@@ -7,20 +7,7 @@
 
 <div class="panel panel-default">
     <div class="panel-body">
-        @using (Ajax.BeginForm("EventSearch", "FindEvent",
-            new AjaxOptions
-            {
-                InsertionMode = InsertionMode.Replace,
-                HttpMethod = "GET",
-                OnFailure = "searchFailed",
-                LoadingElementId = "ajax-loader",
-                UpdateTargetId = "searchresults"
-            }))
-        {
-            
-        }
-
-        @using (Ajax.BeginForm("LocationSearch", "FindEvent",
+        @using (Ajax.BeginForm("Search", "FindEvent",
             new AjaxOptions
             {
                 InsertionMode = InsertionMode.Replace,

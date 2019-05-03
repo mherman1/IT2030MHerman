@@ -1,0 +1,31 @@
+﻿@model EventApplication.Models.Event
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+<p>Sale ends on @Html.ValueFor(model => model.StartDate, "{0:MM/dd/yyyy}")</p>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayFor(model => model.Title)
+        </th>
+        <th>
+            Number of Tickets
+        </th>
+    </tr>
+
+    <tr>
+        <th>
+            Free
+        </th>
+        <th>
+            <input type="number" name="q" min="1" max="10">
+        </th>
+    </tr>
+</table>
+
+<p>@Html.ActionLink("Checkout", "OrderSummary", "TicketsOrdered", new { id = Model.EventId }, new { @class = "btn btn-primary" })</p>

@@ -15,7 +15,6 @@ namespace EventApplication.Controllers
         private EventApplicationDB db = new EventApplicationDB();
 
         // GET: Organize
-        //[Authorize]
         public ActionResult Index()
         {
             ViewBag.EventTypeId = new SelectList(db.EventTypes, "EventTypeId", "Type");

@@ -1,0 +1,13 @@
+﻿@model EventApplication.Models.Event
+
+@{
+    ViewBag.Title = "OrderSummary";
+}
+
+<h2>Order Summary</h2>
+
+<p>Order Number</p>
+
+<p>@Html.DisplayFor(model => model.Title)</p>
+
+<p>@Html.ActionLink("Go To My Tickets", "AddToOrder", "TicketsOrdered", new { id = Model.EventId }, new { @class = "btn btn-primary" })</p>

@@ -23,6 +23,12 @@ textarea {
     max-width: 280px;
 }
 
-#CreateNewType {
-   
+#deals {
+    display: inline-block;
+    width: 40%;
+}
+
+#find {
+    display: inline-block;
+    width: 40%
 }
