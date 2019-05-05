@@ -26,8 +26,8 @@
             <td>@item.DateCreated</td>
             <td></td>
             @*<td id="item-count-@item.RecordId">@item.Count</td>*@
-            <td id="update-message">Processed</td>
-            <td><a href="#" data-id="@item.RecordId" class="RemoveLink">Cancel Order</a></td>
+            <td id="item-status-@item.RecordId">@item.Status</td>
+            <td id="link"><a href="#" data-id="@item.RecordId" class="CancelLink">Cancel Order</a></td>
         </tr>
     }
 </table>

@@ -69,6 +69,7 @@ namespace EventApplication.Controllers
         {
             return db.Events
                  .Where(a => a.Title.Contains(searchString) || a.Type.Type.Contains(searchString))
+                 .Where(a => a.StartDate >= DateTime.Today)
                  .OrderBy(a => a.Title)
                  .ToList();
         }
@@ -77,6 +78,7 @@ namespace EventApplication.Controllers
         {
             return db.Events
                 .Where(a => a.City.Contains(searchString) || a.State.Contains(searchString))
+                .Where(a => a.StartDate >= DateTime.Today)
                 .OrderBy(a => a.State)
                 .OrderBy(a => a.City)
                 .ToList();
@@ -87,6 +89,7 @@ namespace EventApplication.Controllers
             return db.Events
                  .Where(a => a.Title.Contains(q) || a.Type.Type.Contains(q))
                  .Where(a => a.City.Contains(p) || a.State.Contains(p))
+                 .Where(a => a.StartDate >= DateTime.Today)
                  .OrderBy(a => a.Title)
                  .ToList();
         }

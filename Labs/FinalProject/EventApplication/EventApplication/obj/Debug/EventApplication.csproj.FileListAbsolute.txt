@@ -107,5 +107,3 @@ C:\Users\Annapolis\Documents\MFolder\CCC\IT2030\GitHub\IT2030MHerman\Labs\FinalP
 C:\Users\Annapolis\Documents\MFolder\CCC\IT2030\GitHub\IT2030MHerman\Labs\FinalProject\EventApplication\EventApplication\obj\Debug\EventApplication.csproj.CopyComplete
 C:\Users\Annapolis\Documents\MFolder\CCC\IT2030\GitHub\IT2030MHerman\Labs\FinalProject\EventApplication\EventApplication\obj\Debug\EventApplication.dll
 C:\Users\Annapolis\Documents\MFolder\CCC\IT2030\GitHub\IT2030MHerman\Labs\FinalProject\EventApplication\EventApplication\obj\Debug\EventApplication.pdb
-C:\Users\Annapolis\Documents\MFolder\CCC\IT2030\GitHub\IT2030MHerman\Labs\FinalProject\EventApplication\EventApplication\obj\Debug\EventApplication.Migrations.AddOrder.resources
-C:\Users\Annapolis\Documents\MFolder\CCC\IT2030\GitHub\IT2030MHerman\Labs\FinalProject\EventApplication\EventApplication\obj\Debug\EventApplication.csproj.GenerateResource.cache

@@ -13,6 +13,6 @@ namespace EventApplication.Models
 
         public int ItemCount;
 
-        public string Message;
+        public string Status = "Canceled";
     }
 }

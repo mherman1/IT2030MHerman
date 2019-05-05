@@ -67,7 +67,6 @@ namespace EventApplication.Models
             {
                 yield return new ValidationResult("End Date must be later than the Start Date", new[] { "EndDate" });
             }
-
         }
     }
 }

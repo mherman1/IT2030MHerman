@@ -75,8 +75,9 @@ namespace EventApplication.Models
                 {
                     OrderId = this.TicketsOrderedId,
                     EventId = eventId,
-                    Quantity = 0,
-                    DateCreated = DateTime.Now
+                    Quantity = 1,
+                    DateCreated = DateTime.Now,
+                    Status = "Processed"
                 };
 
                 db.Orders.Add(orderItem);
@@ -110,14 +111,13 @@ namespace EventApplication.Models
             else
             {
                 //The count <= 0; remove cart item
-                db.Orders.Remove(orderItem);
+                //db.Orders.Remove(orderItem);
                 newQuantity = 0;
             }
 
             db.SaveChanges();
 
             return newQuantity;
-
         }
     }
 }

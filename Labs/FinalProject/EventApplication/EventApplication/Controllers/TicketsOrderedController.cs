@@ -15,6 +15,7 @@ namespace EventApplication.Controllers
 
         private EventApplicationDB db = new EventApplicationDB();
 
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -28,7 +29,7 @@ namespace EventApplication.Controllers
             }
             return View(@event);
         }
-
+        
         public ActionResult Register(int? id)
         {
             if (id == null)
@@ -92,7 +93,7 @@ namespace EventApplication.Controllers
                 DeleteId = id,
                 //CartTotal = cart.GetCartTotal(),
                 ItemCount = newItemCount,
-                Message = "Canceled"
+                //Status = "Canceled";
             };
 
             return Json(vm);
